@@ -1,16 +1,21 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { BuilderComponent, useIsPreviewing } from '@builder.io/react';
-import { usePathname } from 'next/navigation';
+
 import builder from '../src/lib/builder';
+
+interface BuilderContent {
+  data?: {
+    title?: string;
+  };
+  [key: string]: unknown;
+}
 
 
 export default function BuilderContent() {
   const isPreviewingInBuilder = useIsPreviewing();
-  const pathname = usePathname();
   const [notFound, setNotFound] = useState(false);
-  const [content, setContent] = useState<any>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [content, setContent] = useState<BuilderContent | null>(null);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
   useEffect(() => {
     builder
