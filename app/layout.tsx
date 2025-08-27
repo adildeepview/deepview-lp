@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Deep View – Your Daily 5-Minute AI Briefing",
+  title: "The Deep View – Your Daily 5-Minute AI",
   description: "Get smarter about AI in just five minutes a day: The Deep View delivers concise analysis, breaking news, and expert commentary straight to your inbox — trusted by professionals at Google, Meta, Microsoft and others.",
 };
 
